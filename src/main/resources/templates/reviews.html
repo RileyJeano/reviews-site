@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+	<title>All Reviews</title>
+</head>
+
+<body>
+<head>
+	<h1>All of Greg's Sweaters, Reviewed</h1>
+</head>
+	<main>
+		<p>Maybe a little blurb about what hap</p>
+
+		<ul>
+			<li th:each="review : ${reviews}">
+			<a th:href="|/reviews/${review.id}|" th:text="${review.title}">PlaceHolder</a>
+			</li>
+		</ul>
+
+	</main>
+
+	<footer>
+		<small></small>
+	</footer>
+</body>
+
+</html>

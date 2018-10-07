@@ -4,13 +4,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import reviews_site.reviewssite.model.Review;
 
 //Donny you changed this
-@Repository
+@Service
 public class ReviewRepository {
 
 	private Map<Long, Review> reviewRepository = new HashMap<>();

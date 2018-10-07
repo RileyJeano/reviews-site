@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title th:text="@{review.title}">PlaceHolder</title>
+	<title th:text="${review.title}">PlaceHolder</title>
 </head>
 <body>
 <header> 
 <h1 th:text="${review.title}">PlaceHolder Title</h1>
 <main>
 <img th:src="@{|/images/${review.image}|}">
+<p th:text="${review.date}">Date</p>
 
 <p th:text="${review.content}">Place holder Content</p>
 	<ul>
 		<li th:text="${review.category}"></li>
-		<li th:text="${review.date}"></li>
+		<li>Closet Cleaning Recommendation: Keep it</li>
 	</ul>
 
 </main>

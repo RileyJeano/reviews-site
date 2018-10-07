@@ -15,7 +15,8 @@ public class ReviewRepository {
 	private Map<Long, Review> reviewRepository = new HashMap<>();
 
 	public ReviewRepository() {
-		add(new Review(1L, "Greg's Christmas Sweater", "pillbug-small.jpg", "Holliday",
+		//when creating the repository, add the default reviews:
+		add(new Review(6L, "Greg's Christmas Sweater", "pillbug-small.jpg", "Holliday",
 				"8.7/10 - \rNever have I been so gifted, as to see Greg's Chrsitmas Sweater. It was the greatest gift one could recieve. I believe his Great Aunt Mable knitted it for him some years back. It is covered in the finest layer of cat hair, from said Great Aunt Mable. He begins wearing this sweater sometime in mid November and does not take it off till the new year. I dare say he bathes in it. Of all his sweaters this is one of my favorites.",
 				"12/25/1993"));
 		add(new Review(2L, "Greg's College Sweater", "image", "Historical",
@@ -37,17 +38,14 @@ public class ReviewRepository {
 	}
 
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
 		return reviewRepository.isEmpty();
 	}
 
 	public Review findOne(long id) {
-		// TODO Auto-generated method stub
 		return reviewRepository.get(id);
 	}
 
 	public Collection<Review> findAll() {
-		// TODO Auto-generated method stub
 		return reviewRepository.values();
 	}
 

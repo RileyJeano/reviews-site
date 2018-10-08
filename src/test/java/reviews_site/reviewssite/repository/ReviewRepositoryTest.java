@@ -16,8 +16,8 @@ import reviews_site.reviewssite.model.Review;
 @RunWith(SpringRunner.class)
 public class ReviewRepositoryTest {
 
-	@Resource
-	ReviewRepository reviewRepo;
+//	@Resource
+	ReviewRepository reviewRepo = new ReviewRepository();
 
 	@Test
 	public void shouldPutAReviewinCollection() {
